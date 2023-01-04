@@ -10,4 +10,9 @@ export const useModelStore = defineStore("modal", {
       console.log(this.isOpen);
     },
   },
+  getters: {
+    hiddenClass() {
+      return this.isOpen ? "hidden" : "";
+    },
+  },
 });
