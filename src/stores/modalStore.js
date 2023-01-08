@@ -2,7 +2,8 @@ import { defineStore } from "pinia";
 
 export const useModelStore = defineStore("modal", {
   state: () => ({
-    isOpen: false,
+    isOpen: true,
+    // tab: "login",
   }),
   actions: {
     toggleAuthModal() {
