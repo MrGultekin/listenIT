@@ -179,7 +179,7 @@ import { ref } from "vue";
 const store = useModelStore();
 const tab = ref("login");
 const schema = ref({
-  name: "required",
+  name: "required|min:3|max:100|alpha_spaces",
   email: "",
   age: "",
   password: "",
