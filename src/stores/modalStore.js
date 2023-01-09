@@ -4,9 +4,9 @@ export const useModelStore = defineStore("modal", {
   state: () => ({
     isOpen: true,
     // tab: "login",
-    schema: {
-      name: "required",
-    },
+    // schema: {
+    //   name: "required",
+    // },
   }),
   actions: {
     toggleAuthModal() {

@@ -93,7 +93,7 @@
           <!-- Registration Form -->
           <vee-form
             v-show="tab === 'register'"
-            :validation-schema="store.schema"
+            :validation-schema="schema"
           >
             <!-- Name -->
             <div class="mb-3">
@@ -178,11 +178,15 @@ import { useModelStore } from "@/stores/modalStore";
 import { ref } from "vue";
 const store = useModelStore();
 const tab = ref("login");
-// const schema = ref({
-//   name: "required",
-//   email: "",
-//   age: "required|integer",
-// });
+const schema = ref({
+  name: "required",
+  email: "",
+  age: "",
+  password: "",
+  confirmPassword: "",
+  country: "",
+  tos: "",
+});
 </script>
 
 <style scoped></style>
