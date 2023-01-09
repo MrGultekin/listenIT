@@ -89,8 +89,12 @@
               Submit
             </button>
           </form>
+
           <!-- Registration Form -->
-          <vee-form v-show="tab === 'register'">
+          <vee-form
+            v-show="tab === 'register'"
+            :validation-schema="store.schema"
+          >
             <!-- Name -->
             <div class="mb-3">
               <label class="inline-block mb-2">Name</label>
@@ -100,6 +104,7 @@
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Name"
               />
+              <ErrorMessage name="name" class="text-red-600" />
             </div>
             <!-- Email -->
             <div class="mb-3">
@@ -173,6 +178,11 @@ import { useModelStore } from "@/stores/modalStore";
 import { ref } from "vue";
 const store = useModelStore();
 const tab = ref("login");
+// const schema = ref({
+//   name: "required",
+//   email: "",
+//   age: "required|integer",
+// });
 </script>
 
 <style scoped></style>
